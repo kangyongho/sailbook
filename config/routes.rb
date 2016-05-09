@@ -53,4 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get '/hello', to: 'hello#view'
+  get '/hello/list', to: 'hello#list'
+  # match ':controller(/:action(/:id)', via: [:get, :post, :patch]
 end
