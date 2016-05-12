@@ -11,5 +11,9 @@ class HelloController < ApplicationController
   def list
     @books = Book.all
     # ORM 메소드 all - books 테이블 : select * from books
+    # 모든 Book 객체를 배열로 리턴
+  end
+  def app_var
+    render text: MY_APP['logo']['source']
   end
 end

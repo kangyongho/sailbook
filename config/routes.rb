@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :fan_comments
+  resources :reviews
+  resources :authors
+  resources :users
+  resources :books
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -56,5 +61,9 @@ Rails.application.routes.draw do
 
   get '/hello', to: 'hello#view'
   get '/hello/list', to: 'hello#list'
+  get '/hello/app_var', to: 'hello#app_var'
+
+  get 'keyword/keyword', to: 'keyword#search'
+
   # match ':controller(/:action(/:id)', via: [:get, :post, :patch]
 end
